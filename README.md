@@ -16,11 +16,14 @@ The purpose of this project was to investigate the utility of alternative financ
 
 ### Table of Contents
 
-... Table of contents here
+- [Congress Trading Analysis](#congress-trading-analysis)
+- [Insider Trading Analysis](#insider-trading-analysis)
+- [Patent Analysis](#patent-analysis)
+- [License](#license)
 
 ## Congress Trading Analysis
 
-View the Notebook: 🔗[**congress-trading.ipynb**](./analysis/congress-trading.ipynb)
+> _View the Notebook:_ 🔗[**congress-trading.ipynb**](./analysis/congress-trading.ipynb)
 
 _Analysis description and motivations ..._
 
@@ -34,37 +37,55 @@ In this analysis we utilized the following Python packages:
 
 ### Data & Acquisition
 
-The very crucial part of any data science project is dataset. Therefore list all the data sources used in the project, including links to the original data, descriptions of the data, and any pre-processing steps that were taken.
+...
 
 ### Results and evaluation
 
-Provide an overview of the results of your project, including any relevant metrics and graphs. Include explanations of any evaluation methodologies and how they were used to assess the quality of the model. You can also make it appealing by including any pictures of your analysis or visualizations.
+...
+
+[Back to Top 🔝](#table-of-contents)
 
 ## Insider Trading Analysis
 
-View the Notebook: 🔗[**insider-trading-analysis.ipynb**](./analysis/insider-trading-analysis.ipynb)
+> _View the Notebook:_ 🔗[**insider-trading-analysis.ipynb**](./analysis/insider-trading-analysis.ipynb)
 
-_Analysis description and motivations ..._
+For this analysis we investigated the utility of insider trading data in predicting US equity prices and making trading decisions. Inside trades must be reported to the SEC within 2 business days of the trade. In theory, if a signifigant number of insiders are buying or selling a stock, it could be a signal that the stock is going to go up or down. 
+
+We investigated this theory by looking at the historical performance of stocks that had a high number of insider buys or sells.
 
 ### Python Packages Used
 
 In this analysis we utilized the following Python packages:
 
-- **PySpark, numpy, pandas:** Used for ...
-- **yFinance:**  Used for ...
-- **matplotlib, seaborn:** Used for ...
+- **PySpark, numpy, pandas:** Used for data manipulation and analysis.
+- **yFinance:**  Used to get historical stock prices for the window of insider trades that we were analyizing.
+- **matplotlib, seaborn:** Used for data visualization.
 
 ### Data & Acquisition
 
-The very crucial part of any data science project is dataset. Therefore list all the data sources used in the project, including links to the original data, descriptions of the data, and any pre-processing steps that were taken.
+The crucial part of this analysis was the data acquisition. To obtain the insider trading data, we gathered a large dataset from the [Quiver Quantitative](https://www.quiverquant.com/insiders/) API. We then needed to acquire the historical stock prices for the stocks that we were analyzing. We used the [yFinance](https://pypi.org/project/yfinance/) package to get the historical stock prices for the stocks that we were analyzing by specifying the date range of the insider trades that we were analyzing.
 
-### Results and evaluation
+### Results & Evaluation
 
-Provide an overview of the results of your project, including any relevant metrics and graphs. Include explanations of any evaluation methodologies and how they were used to assess the quality of the model. You can also make it appealing by including any pictures of your analysis or visualizations.
+Given the method of analysis, the results of this study were largely qualitative and visual. We were looking for stocks that had a high number of insider buys or sells and then looking at the historical performance of the stock after the insider trades. We were simply looking for visual patterns in the data that would indicate that insider trades could be used as a signal for future stock performance, which could then be further investigated in a more quantitative manner. The following are a couple of notable results.
+
+> _It is important to note that these results are be affected by the quality of our data, and some of the results may be skewed by the fact that we are looking at the data that was presently available. In a real-world scenario, we would be working with much more robust data and would be able to look at the data in real-time._
+
+Below is our result for the analysis of Akamai Technologies (AKAM). We can see that there were a large number of insider buys in the middle of 2023, and the stock price has been on a steady rise since then.
+
+![Alt text](./img/image2.png)
+
+Another notable result relates to DocuSign (DOCU). We can see that there was a signifigant number of sales in Q3-Q4 2021, and the stock price has been on a steady decline since then with sales dominating the insider activity. 
+
+![img1](./img/img1.png)
+
+Overall, these results suggest that insider trading data could be used as a signal for future stock performance. However, it is important to note that this factor alone is not enough to make trading decisions. It is also important to consider other factors such as the company's financials, the industry, and the overall market conditions.
+
+[Back to Top 🔝](#table-of-contents)
 
 ## Patent Analysis
 
-View the Notebook: 🔗[**patent-analysis.ipynb**](./analysis/patent-analysis.ipynb)
+> _View the Notebook:_ 🔗[**patent-analysis.ipynb**](./analysis/patent-analysis.ipynb)
 
 _Analysis description and motivations ..._
 
@@ -78,11 +99,13 @@ In this analysis we utilized the following Python packages:
 
 ### Data & Acquisition
 
-The very crucial part of any data science project is dataset. Therefore list all the data sources used in the project, including links to the original data, descriptions of the data, and any pre-processing steps that were taken.
+...
 
-### Results and evaluation
+### Results & Evaluation
 
-Provide an overview of the results of your project, including any relevant metrics and graphs. Include explanations of any evaluation methodologies and how they were used to assess the quality of the model. You can also make it appealing by including any pictures of your analysis or visualizations.
+...
+
+[Back to Top 🔝](#table-of-contents)
 
 ## License
 
