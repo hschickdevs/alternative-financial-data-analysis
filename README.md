@@ -25,7 +25,7 @@ The purpose of this project was to investigate the utility of alternative financ
 
 > _View the Notebook:_ 🔗[**congress-trading.ipynb**](./analysis/congress-trading.ipynb)
 
-_Analysis description and motivations ..._
+Our goal for this analysis was to understand whether congressmen have prior knowledge about certain companies before buying or selling a stock and whether retail investors can benefit from copy trading. 
 
 ### Python Packages Used
 
@@ -37,11 +37,11 @@ In this analysis we utilized the following Python packages:
 
 ### Data & Acquisition
 
-The congress trading dataset used for the analysis was requested from the [Quiver Quantitative](https://www.quiverquant.com/insiders/) API. The stock price data was retrieved from Yahoo Finance via the yfinance API.
+The congress trading dataset used for the analysis was requested from the [Quiver Quantitative](https://www.quiverquant.com/) API. The stock price data was retrieved from Yahoo Finance via the yfinance API.
 
 ### Results and evaluation
 
-Our goal for this analysis was to understand whether congressmen have prior knowledge about certain companies before buying or selling a stock. We analysed which were the most bought stocks for each month in the past 24 months. We then constructed a portfolio consisting of stocks purchased in the month of January 2023 and weighted each stock in the portfolio based on the amount of stocks bought by congressmen in Jan 23. We retrieved the close price for all the stocks in the portfolio on 1st January 2023 and calculated the portfolio growth/return over the next 6 months. This portfolio was a simple a buy and hold strategt without any rebalancing.
+We analysed which were the most bought stocks for each month in the past 24 months. We then constructed a portfolio consisting of stocks purchased in the month of January 2023 and weighted each stock in the portfolio based on the amount of stocks bought by congressmen in Jan 23. We retrieved the close price for all the stocks in the portfolio on 1st January 2023 and calculated the portfolio growth/return over the next 6 months. This portfolio was a simple a buy and hold strategt without any rebalancing.
 
 Below is the portfolio growth visualized from Jan 2023 - Jun 2023
 
@@ -91,23 +91,29 @@ Overall, these results suggest that insider trading data could be used as a sign
 
 > _View the Notebook:_ 🔗[**patent-analysis.ipynb**](./analysis/patent-analysis.ipynb)
 
-_Analysis description and motivations ..._
+Our goal for this analysis was to understand whether patents filing information from a company can be a signal to buy a stock and whether number of patents filed by a company correlates with their stock price movement.
 
 ### Python Packages Used
 
 In this analysis we utilized the following Python packages:
 
-- **PySpark, numpy, pandas:** Used for ...
-- **yFinance:**  Used for ...
-- **matplotlib, seaborn:** Used for ...
+- **PySpark, numpy, pandas:** Used for data wrangling and analysis
+- **yFinance:**  Used for retrieving stock prices
+- **matplotlib:** Used for data visualization
 
 ### Data & Acquisition
 
-...
+The patent filing data was acquired from [Quiver Quantitative](https://www.quiverquant.com/) API and the stock prices were acquired from Yahoo Finance via the yfinance API.
 
 ### Results & Evaluation
 
-...
+We analysed the top 10 companies in the dataset by patents filed and ran a correlation on number of patents filed per month and the average stock price every month. The results for the top 10 companies did not display any high correlation between the two variables.
+
+![Alt text](./img/img4.png)
+![Alt text](./img/img5.png)
+![Alt text](./img/img6.png)
+![Alt text](./img/img7.png)
+![Alt text](./img/img8.png)
 
 [Back to Top 🔝](#table-of-contents)
 
