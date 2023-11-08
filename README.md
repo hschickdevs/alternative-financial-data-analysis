@@ -31,17 +31,21 @@ _Analysis description and motivations ..._
 
 In this analysis we utilized the following Python packages:
 
-- **PySpark, numpy, pandas:** Used for ...
-- **yFinance:**  Used for ...
-- **matplotlib:** Used for ...
+- **PySpark, numpy, pandas:** Used for data wrangling and analysis
+- **yFinance:**  Used for retrieving stock prices
+- **matplotlib:** Used for data visualization
 
 ### Data & Acquisition
 
-...
+The congress trading dataset used for the analysis was requested from the [Quiver Quantitative](https://www.quiverquant.com/insiders/) API. The stock price data was retrieved from Yahoo Finance via the yfinance API.
 
 ### Results and evaluation
 
-...
+Our goal for this analysis was to understand whether congressmen have prior knowledge about certain companies before buying or selling a stock. We analysed which were the most bought stocks for each month in the past 24 months. We then constructed a portfolio consisting of stocks purchased in the month of January 2023 and weighted each stock in the portfolio based on the amount of stocks bought by congressmen in Jan 23. We retrieved the close price for all the stocks in the portfolio on 1st January 2023 and calculated the portfolio growth/return over the next 6 months. This portfolio was a simple a buy and hold strategt without any rebalancing.
+
+Below is the portfolio growth visualized from Jan 2023 - Jun 2023
+
+![Alt text](./img/img3.png)
 
 [Back to Top 🔝](#table-of-contents)
 
